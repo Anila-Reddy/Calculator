@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rubik+Distressed&display=swap" rel="stylesheet">
+   <title>Calculator</title>
+   <style>
+    *
+    {
+        padding: 0px;
+        margin: 0px;
+    }
+    #calc
+    {
+        width: 300px;
+        height: 450px;
+        background-color: purple;
+        margin-top: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px black;
+    }
+    #display
+    {
+        font-family: 'Orbitron', sans-serif;
+        width: 90%;
+        height: 30px;
+        position: relative;
+        top: 10px;
+        box-shadow: 0px 0px 5px black;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: cornsilk;
+        font-size: 30px;
+        padding: 3px;
+    }
+    .i
+    {
+        background: rgba(128,128,128,0.662);
+        border: none;
+        margin: 10px;
+        box-shadow: 0px 0px 5px black;
+        color: white;
+        border-radius: 4px;
+        width: 45px;
+        height: 40px;
+        font-size: 30px;
+        padding-bottom: 20px;
+        font-family: 'Orbitron', sans-serif;
+    }
+    .i:hover
+    {
+        background-color: white;
+        color: purple;
+    }
+    #clr
+    {
+        width: 12%;
+        height: 30px;
+        background-color: yellow;
+        text-align: center;
+        letter-spacing: 10px;
+        border-radius: 4px;
+        position: absolute;
+        left: 515px;
+        top: 410px;
+        font-size: 25px;
+        
+    }
+    #equ
+    {
+        width: 7%;
+        height: 30px;
+        background-color: yellow;
+        text-align: center;
+        border-radius: 4px;
+        position: absolute;
+        left: 675px;
+        top: 410px;
+        font-size: 25px;
+    }
+    #equ:hover, #clr:hover{
+        background-color: black;
+        color: yellow;
+    }
+   </style>
+</head>
+<body>
+    <center>
+    <div id="calc">
+        <form id="calculator" name="cform">
+            <input type="text" id="display" name="Answer">
+            <br><br>
+            <input type="button" class="i" value="1" onclick="cform.Answer.value+='1'">
+            <input type="button" class="i" value="2" onclick="cform.Answer.value+='2'">
+            <input type="button" class="i" value="3" onclick="cform.Answer.value+='3'">
+            <input type="button" class="i" value="+" onclick="cform.Answer.value+='+'">
+            <br><br>
+            <input type="button" class="i" value="4" onclick="cform.Answer.value+='4'">
+            <input type="button" class="i" value="5" onclick="cform.Answer.value+='5'">
+            <input type="button" class="i" value="6" onclick="cform.Answer.value+='6'">
+            <input type="button" class="i" value="-" onclick="cform.Answer.value+='-'">
+            <br><br>
+            <input type="button" class="i" value="7" onclick="cform.Answer.value+='7'">
+            <input type="button" class="i" value="8" onclick="cform.Answer.value+='8'">
+            <input type="button" class="i" value="9" onclick="cform.Answer.value+='9'">
+            <input type="button" class="i" value="*" onclick="cform.Answer.value+='*'">
+            <br><br>
+            <input type="button" class="i" value="/" onclick="cform.Answer.value+='/'">
+            <input type="button" class="i" value="0" onclick="cform.Answer.value+='0'">
+            <input type="button" class="i" value="." onclick="cform.Answer.value+='.'">
+            <input type="button" class="i" value="%" onclick="cform.Answer.value+='%'">
+            <br><br>
+            <input type="button" id="clr" value="CLEAR" onclick="cform.Answer.value=' '">
+            <input type="button" id="equ" value="=" onclick="cform.Answer.value=eval(cform.Answer.value)"">
+        </form>
+    </div>
+</center>
+</body>
+</html>
